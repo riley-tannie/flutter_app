@@ -8,7 +8,15 @@ class DataInput extends StatefulWidget {
 }
 
 class _DataInputState extends State<DataInput> {
-  String message = 'text';
+  String message = '';
+  TextEditingController tc = TextEditingController();
+
+  //function
+  void updateText(){
+    setState(() {
+      message = tc.text;
+  });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,15 +27,21 @@ class _DataInputState extends State<DataInput> {
         body: Column(
           children: [
             TextField(
-              onChanged: (String txt){
-                setState(() {
-                  message = txt;
-                });
-              },
+              decoration: InputDecoration(hintText: 'Enter your name: '),
+              controller: tc,
             ),
+            ElevatedButton(
+              onPressed: () => updateText(), //better with parameters
+              child: Text('Finding your Matches')),
             Text(message),
           ],
         ),
     );
   }
 }
+
+//onChanged: (String txt){
+                //setState(() {
+                  //message = txt;
+                //});
+              //},
