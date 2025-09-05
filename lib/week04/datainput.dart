@@ -26,13 +26,23 @@ class _DataInputState extends State<DataInput> {
         ),
         body: Column(
           children: [
-            TextField(
-              decoration: InputDecoration(hintText: 'Enter your name: '),
-              controller: tc,
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter your name: ',
+                  suffixIcon: IconButton(onPressed: tc.clear,
+                  icon: Icon(Icons.clear))
+                  ),
+                controller: tc,
+              ),
             ),
             ElevatedButton(
               onPressed: () => updateText(), //better with parameters
-              child: Text('Finding your Matches')),
+              child: Text('Finding your Matches')
+            ),
+              SizedBox(height: 16,),
             Text(message),
           ],
         ),
