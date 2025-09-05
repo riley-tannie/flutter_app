@@ -21,7 +21,7 @@ class _DataInputState extends State<DataInput> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('One Step Closer to your love'),
+        title: Text('One Step Closer to your love', style: TextStyle(fontFamily: 'Caveat'),),
         backgroundColor: Colors.pink,
         ),
         body: Column(
@@ -40,7 +40,7 @@ class _DataInputState extends State<DataInput> {
             ),
             ElevatedButton(
               onPressed: () => updateText(), //better with parameters
-              child: Text('Finding your Matches')
+              child: Text('Finding your Matches', style: TextStyle(fontFamily: 'Caveat'))
             ),
               SizedBox(height: 16,),
             Text(message),
