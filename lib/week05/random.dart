@@ -19,7 +19,7 @@ class Random extends StatefulWidget {
           message = 'Please check your inputs';
       });
     } else{
-      int random = min + Random().nextInt();
+      int random = min;
       setState((){
         message = '$random';
       });

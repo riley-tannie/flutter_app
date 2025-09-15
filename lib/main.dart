@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/week05/random.dart';
+import 'package:flutter_app/assignment/randomguess.dart';
+
 
 void main(){
   runApp(MaterialApp(
-    home: Random()),
+    home: Randomguess()),
   );
 }
